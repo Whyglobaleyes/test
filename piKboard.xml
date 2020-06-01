@@ -1,0 +1,191 @@
+  <keyboard>
+    <chainQuitKey>C-g</chainQuitKey>
+<!-- AKB EDITS ------------------------------------------------------------- -->
+<!-- ref: https://www.tomshardware.com/uk/news/raspberry-pi-custom-keyboard-shortcuts,40215.html -->
+<!--------  BLANK TEMPLATE  ----------------------------------------------------
+    <keybind key="-TBC-">
+      <action name="Execute">
+         <command>-TBC-</command>
+      </action>
+    </keybind>
+-->
+<!--------  SYNTAX  ------------------------------------------------------------
+A - ALT                 C - CTRL                S - Shift           W - Windows
+space - spacebar        Return - enter          Home - home
+Up / Down / Right / Left - arrow keys           Prior - Pg Up       Next - Pg Dn            
+End - end               BackSpace - backspace   Print - Print Screen
+-->
+    <keybind key="W-t">
+      <action name="Execute">
+         <command>-TBC-</command>
+      </action>
+    </keybind>
+
+<!-- END AKB EDITS --------------------------------------------------------- -->
+    <!-- Keybindings for desktop switching -->
+    <keybind key="C-A-Left">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="MoveResizeTo">
+        <width>50%</width>
+      </action>
+      <action name="MoveToEdge"><direction>west</direction></action>
+    </keybind>
+    <keybind key="C-A-Right">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="MoveResizeTo">
+        <width>50%</width>
+      </action>
+      <action name="MoveToEdge"><direction>east</direction></action>
+    </keybind>
+    <keybind key="C-A-Down">
+      <action name="Unmaximize"/>
+    </keybind>
+    <keybind key="C-A-Up">
+      <action name="Maximize"/>
+    </keybind>
+    <keybind key="S-A-Left">
+      <action name="SendToDesktopLeft">
+        <dialog>no</dialog>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="S-A-Right">
+      <action name="SendToDesktopRight">
+        <dialog>no</dialog>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="S-A-Up">
+      <action name="SendToDesktopUp">
+        <dialog>no</dialog>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="S-A-Down">
+      <action name="SendToDesktopDown">
+        <dialog>no</dialog>
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="C-A-d">
+      <action name="ToggleShowDesktop"/>
+    </keybind>
+    <!-- Keybindings for windows -->
+    <keybind key="A-F4">
+      <action name="Close"/>
+    </keybind>
+    <keybind key="A-Escape">
+      <action name="Lower"/>
+      <action name="FocusToBottom"/>
+      <action name="Unfocus"/>
+    </keybind>
+    <keybind key="A-space">
+      <action name="ShowMenu">
+        <menu>client-menu</menu>
+      </action>
+    </keybind>
+    <!-- Keybindings for window switching -->
+    <keybind key="A-Tab">
+      <action name="NextWindow"/>
+    </keybind>
+    <keybind key="A-S-Tab">
+      <action name="PreviousWindow"/>
+    </keybind>
+    <keybind key="C-A-Tab">
+      <action name="NextWindow">
+        <panels>yes</panels>
+        <desktop>yes</desktop>
+      </action>
+    </keybind>
+    <!-- Keybindings for running applications -->
+    <keybind key="Print">
+      <action name="Execute">
+        <command>scrot</command>
+      </action>
+    </keybind>
+    <keybind key="C-A-T">
+      <action name="Execute">
+         <command>x-terminal-emulator</command>
+      </action>
+    </keybind>
+    <!--keybindings for LXPanel -->
+    <keybind key="Super_L">
+      <action name="Execute">
+        <command>lxpanelctl menu</command>
+      </action>
+    </keybind>
+    <keybind key="A-F2">
+      <action name="Execute">
+        <command>lxpanelctl run</command>
+      </action>
+    </keybind>
+    <keybind key="C-Escape">
+      <action name="Execute">
+        <command>lxpanelctl menu</command>
+      </action>
+    </keybind>
+    <keybind key="C-A-M">
+      <action name="Execute">
+         <command>lxpanelctl move</command>
+      </action>
+    </keybind>
+    <keybind key="A-F11">
+      <action name="ToggleFullscreen"/>
+    </keybind>
+    <!-- Launch Task Manager with Ctrl+Shift+Escape -->
+    <keybind key="C-S-Escape">
+      <action name="Execute">
+        <command>lxtask</command>
+      </action>
+    </keybind>
+    <!-- Keybindings for audio volume media keys -->
+    <keybind key="XF86AudioRaiseVolume">
+      <action name="Execute">
+        <command>lxpanelctl command volumealsabt volu</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioLowerVolume">
+      <action name="Execute">
+        <command>lxpanelctl command volumealsabt vold</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioMute">
+      <action name="Execute">
+        <command>lxpanelctl command volumealsabt mute</command>
+      </action>
+    </keybind>
+    <!-- Keybindings for pitop -->
+    <keybind key="0xC6">
+      <action name="Execute">
+        <command>sh -c "if test -e /usr/bin/pt-brightness; then /usr/bin/pt-brightness -d; fi"</command>
+      </action>
+    </keybind>
+    <keybind key="0xC7">
+      <action name="Execute">
+        <command>sh -c "if test -e /usr/bin/pt-brightness; then /usr/bin/pt-brightness -i; fi"</command>
+      </action>
+    </keybind>
+    <keybind key="0xC8">
+      <action name="Execute">
+        <command>pcmanfm</command>
+      </action>
+    </keybind>
+    <keybind key="0xC9">
+      <action name="Execute">
+        <command>lxterminal</command>
+      </action>
+    </keybind>
+    <keybind key="C-A-End">
+      <action name="Execute">
+         <command>lxde-pi-shutdown-helper</command>
+      </action>
+    </keybind>
+    <keybind key="C-A-Delete">
+      <action name="Execute">
+         <command>lxde-pi-shutdown-helper</command>
+      </action>
+    </keybind>
+  </keyboard>
+  

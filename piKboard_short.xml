@@ -1,0 +1,25 @@
+  <keyboard>
+    <chainQuitKey>C-g</chainQuitKey>
+<!-- AKB EDITS ------------------------------------------------------------- -->
+<!-- ref: https://www.tomshardware.com/uk/news/raspberry-pi-custom-keyboard-shortcuts,40215.html -->
+<!--------  BLANK TEMPLATE  ----------------------------------------------------
+    <keybind key="-TBC-">
+      <action name="Execute">
+         <command>-TBC-</command>
+      </action>
+    </keybind>
+-->
+<!--------  SYNTAX  ------------------------------------------------------------
+A - ALT                 C - CTRL                S - Shift           W - Windows
+space - spacebar        Return - enter          Home - home
+Up / Down / Right / Left - arrow keys           Prior - Pg Up       Next - Pg Dn            
+End - end               BackSpace - backspace   Print - Print Screen
+-->
+    <keybind key="W-t">
+      <action name="Execute">
+         <command>-TBC-</command>
+      </action>
+    </keybind>
+
+<!-- END AKB EDITS --------------------------------------------------------- -->
+ 
